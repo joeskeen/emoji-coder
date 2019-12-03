@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.12",
     "@angular/router": "~8.2.12",
     "@healthcatalyst/cashmere": "^6.2.1",
+    "@ngx-pwa/local-storage": "^8.2.3",
     "emoji.json": "^12.1.0",
     "font-awesome": "^4.7.0",
     "npm-font-open-sans": "^1.1.0",

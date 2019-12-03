@@ -6,7 +6,8 @@
         [formControl]="code"
         #codeElement
         hcInput
-        (keydown)="onKeyDown($event)"
+        (keyup)="onKeyUp($event)"
+        (mouseup)="onMouseUp($event)"
         class="code"
       ></textarea>
     </hc-form-field>

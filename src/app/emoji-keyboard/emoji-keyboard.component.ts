@@ -69,4 +69,8 @@ export class EmojiKeyboardComponent implements OnInit {
     this.emojiSelect.emit(emoji);
     this.emojiFilter.reset();
   }
+
+  setRecent(emojiChars: string[]) {
+    this.recentEmojis = emojiChars.map(c => Emojis.find(e => e.char === c));
+  }
 }
