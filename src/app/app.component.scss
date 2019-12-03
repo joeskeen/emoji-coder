@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  .left,
+  .right {
+    flex: 1;
+    border: solid black 1px;
+    padding: 10px;
+    max-height: 100vh;
+    overflow: auto;
+  }
+}
+
+hc-form-field {
+  height: 100%;
+  textarea.code {
+    font-family: monospace;
+    max-height: 100vh;
+    height: 500px;
+  }
+}

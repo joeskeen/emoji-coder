@@ -1,0 +1,35 @@
+<div>
+  <hc-form-field>
+    <input
+      hcInput
+      #searchBox
+      placeholder="search for an emoji"
+      [formControl]="emojiFilter"
+    />
+  </hc-form-field>
+  <div *ngIf="emojiFilter.value?.length">
+    <ul>
+      <li *ngFor="let emoji of filteredEmojis" (click)="emojiClicked(emoji)">
+        {{ emoji.char }} {{ emoji.name }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!emojiFilter.value?.length">
+    <hc-accordion *ngIf="recentEmojis.length" [open]="true">
+      <hc-accordion-toolbar>Recent</hc-accordion-toolbar>
+      <div class="recent-emojis">
+        <span *ngFor="let emoji of recentEmojis" (click)="emojiClicked(emoji)">
+          {{ emoji.char }}
+        </span>
+      </div>
+    </hc-accordion>
+    <hc-accordion *ngFor="let category of categories">
+      <hc-accordion-toolbar>{{ category.category }}</hc-accordion-toolbar>
+      <ul>
+        <li *ngFor="let emoji of category.emojis" (click)="emojiClicked(emoji)">
+          {{ emoji.char }} {{ emoji.name }}
+        </li>
+      </ul>
+    </hc-accordion>
+  </div>
+</div>

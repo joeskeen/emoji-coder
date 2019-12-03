@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:gh-pages": "ng build --prod --base-href=/emoji-coder/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -12,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.12",
+    "@angular/cdk": "^7.3.7",
     "@angular/common": "~8.2.12",
     "@angular/compiler": "~8.2.12",
     "@angular/core": "~8.2.12",
@@ -19,6 +21,10 @@
     "@angular/platform-browser": "~8.2.12",
     "@angular/platform-browser-dynamic": "~8.2.12",
     "@angular/router": "~8.2.12",
+    "@healthcatalyst/cashmere": "^6.2.1",
+    "emoji.json": "^12.1.0",
+    "font-awesome": "^4.7.0",
+    "npm-font-open-sans": "^1.1.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
